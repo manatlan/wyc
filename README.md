@@ -1,6 +1,8 @@
 # wyc
 Create a Web Component (a Custom Element) from a python file (transpile python code to javascript (es2015)).
 
+[![Test](https://github.com/manatlan/wyc/actions/workflows/tests.yml/badge.svg)](https://github.com/manatlan/wyc/actions/workflows/tests.yml)
+
 ## features
 
  * Use python to define your custom element (the important one ;-))
