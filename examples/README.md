@@ -4,9 +4,9 @@
  * the js files : are the rendered javascript versions (by *wyc*'s pytests)
  * the html files : are the showcases ;-)
 
-See [many](many.html) : which show many Custom elements, from simplest to more complex ones
+See [demo](https://htmlpreview.github.io/?https://github.com/manatlan/wyc/blob/main/examples/many.html), the [py file](many.py) or [html source](many.html) : which show many Custom elements, from simplest to more complex ones
 
-See [wcsplyt](wcsplyt.html) : for a useful real component ("wc-splyt" (similar to [wc-split](https://github.com/Giwi/wc-split))) ;-)
+See [demo](https://htmlpreview.github.io/?https://github.com/manatlan/wyc/blob/main/examples/wcsplyt.html), the [py file](wcsplyt.py) or [html source](wcsplyt.html) : for a useful real component ("wc-splyt" (similar to [wc-split](https://github.com/Giwi/wc-split))) ;-)
 
 
 BTW, if you use *wyc*, and you build a useful component : let's share with me/us, and I will add it in that repo ...
