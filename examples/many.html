@@ -4,14 +4,17 @@
     <meta charset="utf-8" />
     <title>Test Many</title>
     <script type='text/javascript' src="many.py.js"></script>
+    <style>h3 {padding:0px;margin:0px}</style>
   </head>
   <body>
 
 <hr/>
+    <h3>my-simplest</h3>
 
     <my-simplest></my-simplest>
 
 <hr/>
+    <h3>my-test</h3>
 
     <script>
     function add(v) {
@@ -27,23 +30,26 @@
     <my-test id="mt" nb="1"></my-test>
 
 <hr/>
+    <h3>my-test2</h3>
 
     <my-test2 id="mt2" value="2"></my-test2>
 
 <hr/>
+    <h3>my-back</h3>
 
     <my-back onclick="this.toggle()"></my-back>
 
 <hr/>
+    <h3>my-fold</h3>
 
-<my-fold title="hello" onchange="console.log('onchange',event)">
-    <my-fold title="hello2 1" onchange="console.log('onchange',event)">
-        <my-fold title="hello3 1" onchange="console.log('onchange',event)">world</my-fold>
-        <my-fold title="hello3 2" onchange="console.log('onchange',event)">world</my-fold>
+    <my-fold title="hello" onchange="console.log('onchange',event)">
+        <my-fold title="hello2 1" onchange="console.log('onchange',event)">
+            <my-fold title="hello3 1" onchange="console.log('onchange',event)">world</my-fold>
+            <my-fold title="hello3 2" onchange="console.log('onchange',event)">world</my-fold>
+        </my-fold>
+        <my-fold title="hello2 2" onchange="console.log('onchange',event)">world</my-fold>
+        <my-fold title="hello2 3" onchange="console.log('onchange',event)">world</my-fold>
     </my-fold>
-    <my-fold title="hello2 2" onchange="console.log('onchange',event)">world</my-fold>
-    <my-fold title="hello2 3" onchange="console.log('onchange',event)">world</my-fold>
-</my-fold>
 
 
   </body>
