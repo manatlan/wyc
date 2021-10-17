@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "wyc"
+version = "1.0.0"
+description = "Create WebCompoent (Custom Element) from a python file"
+authors = ["manatlan <manatlan@gmail.com>"]
+#include = ["LICENSE"]
+readme = 'README.md'
+keywords=['web component', 'custom element', 'es5', 'javascript', 'web', 'html', 'es2015', 'template', "transpile"]
+homepage = "https://github.com/manatlan/wyc"
+repository = "https://github.com/manatlan/wyc"
+documentation = "https://github.com/manatlan/wyc"
+license="MIT"
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^2.7 || ^3.6"
+pscript = "^0.7.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+pytest-cov = "^2.6"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

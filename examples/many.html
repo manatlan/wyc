@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test Many</title>
+    <script type='text/javascript' src="many.py.js"></script>
+  </head>
+  <body>
+
+<hr/>
+
+    <my-simplest></my-simplest>
+
+<hr/>
+
+    <script>
+    function add(v) {
+        let mt=document.getElementById("mt");
+        let nb=parseInt( mt.attributes["nb"].value )
+        mt.attributes["nb"].value = nb + v;
+    }
+    </script>
+
+    <button onclick="add(-1)">-</button>
+    <button onclick="add(1)">+</button>
+
+    <my-test id="mt" nb="1"></my-test>
+
+<hr/>
+
+    <my-test2 id="mt2" value="2"></my-test2>
+
+<hr/>
+
+    <my-back onclick="this.toggle()"></my-back>
+
+<hr/>
+
+    <my-fold title="hello" onchange="console.log('onchange',event)">detail</my-fold>
+
+
+  </body>
+</html>

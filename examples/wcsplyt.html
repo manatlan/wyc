@@ -1,0 +1,19 @@
+
+<script src='wcsplyt.py.js' ></script>
+
+<style>
+    html,body,#wc {
+        width:100%;
+        height:100%;
+    }
+</style>
+
+<wc-splyt id="wc" mode="horizontal" onchange="console.log('changed')">
+    <div slot="a">I'll be placed left</div>
+    <div slot="b">
+        <button onclick="document.getElementById('wc').setAttribute('mode','vertical')">vertical</button>
+        <button onclick="document.getElementById('wc').setAttribute('mode','horizontal')">horizontal</button>
+    </div>
+</wc-split>
+
+
