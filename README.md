@@ -24,7 +24,7 @@ On server side ... just declare a http endpoint (`/generate/<py_file>`), get the
 
 So, your python file is automatically transpiled to JS, and directly usable in your html page, by adding a `<script src='/generate/file.py' ></script>`.
 
-If your component class is named "MyComponent", it will be usable as `<my-component ...> ... </my-component>`
+If your component class is named "MyComponent" (in `file.py`), it will be usable as `<my-component ...> ... </my-component>`
 
 ## documentation
 
@@ -44,7 +44,7 @@ Your class must inherit from `HTMLElement`, so you will have access to *shadow d
  * `def disconnectedCallback(self)`: Invoked each time the custom element is disconnected from the document's DOM.
  * `def adoptedCallback(self)`: Invoked each time the custom element is moved to a new document.
 
-the others methods (`observedAttributes` and `attributeChangedCallback`) should ne be used, because **wyc** generate them automatically depending on the usage of the `@react()` decorator.
+the others methods (`observedAttributes` and `attributeChangedCallback`) should not be used, because **wyc** generate them automatically depending on the usage of the `@react()` decorator.
 
 ### Declare react's attributes
 By using the `@react(*attributes)`, you can declare method which will be invoked when an attribute change.
