@@ -38,21 +38,16 @@ class HelloWorld(HTMLElement):
 
 When it's linked in your html page, you can start to use `<hello-world/>`.
 
-Your class must inherit from `HTMLElement`, so you will have access to *shadow dom* thru `self.shadowRoot`. And your class will work exactly like `HTMLElement` in js side.
+Your class must inherit from `HTMLElement`, so you will have access to *shadow dom* thru `self.shadowRoot`. And your class will work exactly like `HTMLElement` in js side, so there are special methods which are usable nativly:
 
+ * `def connectedCallback(self)`: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
+ * `def disconnectedCallback(self)`: Invoked each time the custom element is disconnected from the document's DOM.
+ * `def adoptedCallback(self)`: Invoked each time the custom element is moved to a new document.
 
-### Initialize things at constructor phase
-Your component can use an `init(self)` instance method, to initialize things in the constructor phase.
-
-```python
-class HelloWorld(HTMLElement):
-    """<div>Hello World</div>"""
-    def init(self):
-        self.root = self.shadowRoot.querySelector("div")
-```
+the others methods (`observedAttributes` and `attributeChangedCallback`) should ne be used, because **wyc** generate them automatically depending on the usage of the `@react()` decorator.
 
 ### Declare react's attributes
-By using the `@react(*attributes)`, you can declare method which will be called when an attribute change (no need to use the `observedAttributes` and `attributeChangedCallback`)
+By using the `@react(*attributes)`, you can declare method which will be invoked when an attribute change.
 
 ```python
 class HelloWorld(HTMLElement):
@@ -63,7 +58,17 @@ class HelloWorld(HTMLElement):
         ...
 ```
 
-When attribute "nb" change, the method is called ... simple!
+When "nb"'s attribute change, the method is invoked ... simple!
+
+### Initialize things at constructor phase
+Your component can use an `init(self)` instance method, to initialize things at constructor phase.
+
+```python
+class HelloWorld(HTMLElement):
+    """<div>Hello World</div>"""
+    def init(self):
+        self.root = self.shadowRoot.querySelector("div")
+```
 
 ### Declare js code in py component
 Sometimes you'll need to use external js, you can declare them in module docstrings.
