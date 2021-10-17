@@ -36,7 +36,14 @@
 
 <hr/>
 
-    <my-fold title="hello" onchange="console.log('onchange',event)">detail</my-fold>
+<my-fold title="hello" onchange="console.log('onchange',event)">
+    <my-fold title="hello2 1" onchange="console.log('onchange',event)">
+        <my-fold title="hello3 1" onchange="console.log('onchange',event)">world</my-fold>
+        <my-fold title="hello3 2" onchange="console.log('onchange',event)">world</my-fold>
+    </my-fold>
+    <my-fold title="hello2 2" onchange="console.log('onchange',event)">world</my-fold>
+    <my-fold title="hello2 3" onchange="console.log('onchange',event)">world</my-fold>
+</my-fold>
 
 
   </body>
