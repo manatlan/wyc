@@ -14,6 +14,8 @@ Create a Web Component (a Custom Element) from a python file (transpile python c
 
 ## install
 
+**wyc** is on [pypi](https://pypi.org/project/wyc/) :
+
 ```pip install wyc```
 
 ## usecase
@@ -85,6 +87,6 @@ At the beginning, I wanted to build the same kind of things for [brython](https:
 
 Based on my experience with [vbuild](https://github.com/manatlan/vbuild), I had made a POC ... And the POC comes to a real life module, which is pretty usable, in production too.
 
-Like that, *wyc* components are usable in html/js, brython, angular, react, svelte ...etc... it's the power of standards.
+Like that, **wyc** components are usable in html/js, brython, angular, react, svelte ...etc... it's the power of standards.
 
 
