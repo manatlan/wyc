@@ -58,7 +58,7 @@ class HelloWorld(HTMLElement):
         ...
 ```
 
-When "nb"'s attribute change, the method is invoked ... simple!
+When "nb" attribute change, the method is invoked ... simple!
 
 ### Initialize things at constructor phase
 Your component can use an `init(self)` instance method, to initialize things at constructor phase.
