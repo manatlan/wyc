@@ -47,10 +47,10 @@ slot {display:block}
 
     @react("mode")
     def modeChanged(self):
-        self.connectedCallback()
+        self.connectedCallback() # re render
         self.dispatchEvent( window.Event('change') )
 
-    def connectedCallback(self):    # not really needed
+    def connectedCallback(self):  # called when rendered in client side
         mode = self.getAttribute("mode") or "horizontal"
         assert mode in ["horizontal","vertical"]
         sizes = JSON.parse(self.getAttribute("sizes") or "[50, 50]")
