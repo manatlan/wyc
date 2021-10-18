@@ -16,7 +16,7 @@ Create a Web Component (a Custom Element) from a python file (transpile python c
 
 ## Changelog
 
-    [see changelog](changelog.md)
+[Zee changelog](changelog.md)
 
 ## Install
 
