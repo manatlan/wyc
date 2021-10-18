@@ -3,6 +3,27 @@
 import wyc
 import pytest
 
+def test_minimal_ones():
+    src="""
+
+class MyToto(HTMLElement):
+    '<b>Hello</b>'
+
+"""
+    js=wyc.build(src)
+    assert 'customElements.define("my-toto", MyToto);' in js
+
+def test_minimal_name(): # 2 UPPERCASE CHAR
+    src="""
+
+class CC(HTMLElement):
+    '<b>Hello</b>'
+
+"""
+    js=wyc.build(src)
+    assert 'customElements.define("c-c", CC);' in js
+
+
 def test_use_of_python():
     src="""
 

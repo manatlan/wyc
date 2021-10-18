@@ -3,7 +3,7 @@ Create a Web Component (a Custom Element) from a python file (transpile python c
 
 [![Test](https://github.com/manatlan/wyc/actions/workflows/tests.yml/badge.svg)](https://github.com/manatlan/wyc/actions/workflows/tests.yml)
 
-## features
+## Features
 
  * Use python to define your custom element (the important one ;-))
  * Use @react decorator to auto declare js methods (avoid `observedAttributes` and `attributeChangedCallback`)
@@ -14,13 +14,17 @@ Create a Web Component (a Custom Element) from a python file (transpile python c
  * 100% unittest coverage
  * should work with py2 too
 
-## install
+## Changelog
+
+    [see changelog](changelog.md)
+
+## Install
 
 **wyc** is on [pypi](https://pypi.org/project/wyc/) :
 
 ```pip install wyc```
 
-## usecase
+## Usecase
 
 On server side ... just declare a http endpoint (`/generate/<py_file>`), get the content of the `<py_file>` and just `return wyc.build(content)`.
 
@@ -28,14 +32,13 @@ So, your python file is automatically transpiled to JS, and directly usable in y
 
 If your component class is named "MyComponent" (in `file.py`), it will be usable as `<my-component ...> ... </my-component>`
 
-## documentation
+## Documentation
 
 A minimal python custom element could be:
 
 ```python
 class HelloWorld(HTMLElement):
     """<div>Hello World</div>"""
-    pass
 ```
 
 When it's linked in your html page, you can start to use `<hello-world/>`.
@@ -87,13 +90,15 @@ class HelloWorld(HTMLElement):
         myExternalJs()
 ```
 
-see [examples](examples/), for real examples and more tips ...
+### Demos and examples
 
-## history
-At the beginning, I wanted to build the same kind of things for [brython](https://brython.info/) ... but it was not a good idea, because brython would have been mandatory to use them.
+See [examples](examples/), for real examples and more tips ...
 
-Based on my experience with [vbuild](https://github.com/manatlan/vbuild), I had made a POC ... And the POC comes to a real life module, which is pretty usable, in production too.
+## History
+At the beginning, I've built the same kind of things for [brython](https://brython.info/) ... but it was not a good idea, because brython would have been mandatory to use them.
 
-Like that, **wyc** components are usable in html/js, brython, angular, react, svelte ...etc... it's the power of standards.
+Based on my experience with [vbuild](https://github.com/manatlan/vbuild), I had made a POC with the marvelous [pscript](https://pscript.readthedocs.io/en/latest/)... And the POC comes to a real life module, which is pretty usable, in production too.
+
+Thus, **wyc** components are usable in html/js, brython, angular, vuejs, react, svelte ...etc... it's the power of standards.
 
 

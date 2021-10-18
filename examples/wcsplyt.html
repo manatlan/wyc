@@ -15,11 +15,13 @@
   </head>
   <body>
 
-    <wc-splyt id="wc" mode="horizontal" onchange="console.log('changed')">
+    <wc-splyt id="wc" mode="horizontal" onchange="console.log('changed', this.getAttribute('sizes'))">
         <div slot="a">I'll be placed left</div>
-        <div slot="b">
+        <div slot="b">I'll be placed right, but I can change the split layout :-)
+          <p>
             <button onclick="document.getElementById('wc').setAttribute('mode','vertical')">vertical</button>
             <button onclick="document.getElementById('wc').setAttribute('mode','horizontal')">horizontal</button>
+          </p>
         </div>
     </wc-split>
 
