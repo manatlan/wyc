@@ -42,15 +42,20 @@
 <hr/>
     <h3>my-fold</h3>
 
-    <my-fold title="hello" onchange="console.log('onchange',event)">
-        <my-fold title="hello2 1" onchange="console.log('onchange',event)">
-            <my-fold title="hello3 1" onchange="console.log('onchange',event)">world</my-fold>
-            <my-fold title="hello3 2" onchange="console.log('onchange',event)">world</my-fold>
+    <my-fold title="hello" onchange="console.log('onchange',this.title)">
+        <my-fold title="hello2 1" onchange="console.log('onchange',this.title)">
+            <my-fold title="hello3 1" onchange="console.log('onchange',this.title)">world</my-fold>
+            <my-fold title="hello3 2" onchange="console.log('onchange',this.title)">world</my-fold>
         </my-fold>
-        <my-fold title="hello2 2" onchange="console.log('onchange',event)">world</my-fold>
-        <my-fold title="hello2 3" onchange="console.log('onchange',event)">world</my-fold>
+        <my-fold title="hello2 2" onchange="console.log('onchange',this.title)">world</my-fold>
+        <my-fold title="hello2 3" onchange="console.log('onchange',this.title)">world</my-fold>
     </my-fold>
+<hr/>
+    <h3>my-simplest (added dynamically with js)</h3>
 
+    <script>
+        customElements.whenDefined("my-simplest").then( () => {document.body.appendChild( new MySimplest() )})
+    </script>
 
   </body>
 </html>

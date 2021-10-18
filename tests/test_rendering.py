@@ -66,7 +66,7 @@ class MyToto(HTMLElement):
 """
     js=wyc.build(src)
     assert """Object.defineProperty(MyToto, 'observedAttributes', {
-  get: function() { return ['data-value', 'nb']; }
+    get: function() { return ['data-value', 'nb']; }
 });""" in js
     assert """MyToto.prototype._reacts = {'nb': ['method'], 'data-value': ['method']};""" in js
     assert 'customElements.define("my-toto", MyToto);' in js
