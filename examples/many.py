@@ -7,7 +7,6 @@ class MySimplest( HTMLElement ): #EXAMPLE: minimal one (the className + template
 
     <div>Hello World</div>
     """
-    pass                        # mandatory currently (TODO: perhaps not, in the future)
 
 
 class MyTest( HTMLElement ):    #EXAMPLE: re-render on attribte change
@@ -21,9 +20,6 @@ class MyTest( HTMLElement ):    #EXAMPLE: re-render on attribte change
 
     def init(self):
         self.root = self.shadowRoot.querySelector("b")
-
-    # def connectedCallback(self):    # not really needed
-    #     self.render()
 
     @react("nb")
     def render(self):
@@ -48,9 +44,6 @@ class MyTest2( HTMLElement ):   #EXAMPLE: reuse <my-test> ^^
         self.mt = self.shadowRoot.querySelector("#mt")
         self.shadowRoot.querySelector("#add").addEventListener('click', lambda e: self.setAttribute("value",self.getValue()+1) )
         self.shadowRoot.querySelector("#sub").addEventListener('click', lambda e: self.setAttribute("value",self.getValue()-1) )
-
-    # def connectedCallback(self): # not really needed
-    #     self.render()
 
     def getValue(self):
         return int(self.attributes["value"].value)

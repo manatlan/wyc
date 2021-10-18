@@ -8,6 +8,14 @@ def test_empty_file():
         wyc.build("")
 
 
+def test_bad_minimal_one():
+    src="""
+class Toto(HTMLElement):    # not pythonic !
+"""
+    with pytest.raises(wyc.WycException) as e_info:
+        wyc.build(src)
+
+
 def test_bad_named_single_word():
     src="""
 class Toto(HTMLElement):
@@ -15,6 +23,8 @@ class Toto(HTMLElement):
 """
     with pytest.raises(wyc.WycException) as e_info:
         wyc.build(src)
+
+
 
 def test_bad_inherit():
     src="""
@@ -27,7 +37,7 @@ class MyToto:
 
 def test_bad_syntax():
     src="""
-class MyToto(HTMLElement)
+class MyToto(HTMLElement) # miss ':'
     pass
 """
     with pytest.raises(wyc.WycException) as e_info:
@@ -47,7 +57,7 @@ class MyToto(HTMLElement):
 def test_bad_react_use():
     src="""
 class MyToto(HTMLElement):
-    @react
+    @react                  # react is bad used
     def toto(self):
         pass
 """
